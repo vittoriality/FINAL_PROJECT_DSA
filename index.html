@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Student Record Management System</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header>
+      <div class="logo" id="logo">CATC</div>
+      <div class="grow">
+        <h1 id="schoolTitle">Computer Arts and Techological College, Inc.</h1>
+        <p>Student Record Management System</p>
+      </div>
+      <button class="grey" id="exitBtn">Exit</button>
+    </header>
+
+    <main id="app">
+      <div id="summary"></div>
+
+      <div class="toolbar">
+        <input
+          type="text"
+          id="searchBox"
+          placeholder="Search by student ID or name"
+          aria-label="Search by student ID or name"
+        />
+        <button id="searchBtn">Search</button>
+        <button class="grey" id="clearBtn">Clear</button>
+      </div>
+      <div class="toolbar">
+        <button class="green" id="addBtn">+ Add student</button>
+        <label for="sortBox" style="font-size: 14px; margin-left: auto"
+          >Sort by</label
+        >
+        <select id="sortBox">
+          <option value="id">Student ID (low to high)</option>
+          <option value="gpaHigh">GPA (highest first)</option>
+          <option value="gpaLow">GPA (lowest first)</option>
+          <option value="name">Name (A to Z)</option>
+        </select>
+      </div>
+
+      <div id="message"></div>
+
+      <div class="panel">
+        <p class="hint" id="note"></p>
+        <div class="tablewrap">
+          <table>
+            <thead>
+              <tr>
+                <th>Full name</th>
+                <th>Student ID</th>
+                <th>GPA</th>
+                <th>Actions</th>
+              </tr>
+            </thead>
+            <tbody id="rows"></tbody>
+          </table>
+        </div>
+      </div>
+    </main>
+
+    <main id="goodbye" hidden>
+      <div class="panel">
+        <h2>Goodbye!</h2>
+        <p>
+          You have exited the system. Your records are saved in this browser.
+        </p>
+        <button id="reopen">Open the system again?</button>
+      </div>
+    </main>
+
+    <dialog id="dlg"></dialog>
+
+    <footer>Prepared by <span id="footName"></span></footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
